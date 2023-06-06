@@ -6,13 +6,13 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      test: path.resolve(__dirname, '../test'), // Update the path to point outside the src folder
+      test: path.resolve(__dirname, './test'), // Update the path to point outside the src folder
     },
   },
   test: {
     globals: true,
     environment: "happy-dom",
-    setupFiles: path.resolve(__dirname, '../test/setup.ts'), // Update the path to point outside the src folder
+    setupFiles: path.resolve(__dirname, './test/setup.ts'), // Update the path to point outside the src folder
     exclude: [...defaultExclude],
     environmentMatchGlobs: [
       ['**/*.test.tsx', 'happy-dom'],

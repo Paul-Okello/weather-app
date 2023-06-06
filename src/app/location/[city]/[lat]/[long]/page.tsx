@@ -1,5 +1,5 @@
 import { getClient } from "@/apollo-client"
-import { CalloutCard, InformationPanel, RainChart, StatCard, TempChart } from "@/components"
+import { CalloutCard, InformationPanel, StatCard, TempChart } from "@/components"
 import fetchWeatherQuery from "@/graphql/queries/fetchWeatherQueries"
 import cleanData from "@/lib/cleanData"
 import getBasePath from "@/lib/getbasePath"

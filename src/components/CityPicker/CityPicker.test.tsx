@@ -1,7 +1,7 @@
 import { render } from '../../../test/utilities'
 import CityPicker from './CityPicker'
 import { screen } from "@testing-library/react"
-import { vi } from 'vitest'
+import { describe, vi, test } from 'vitest'
 import React from 'react'
 
 
@@ -12,14 +12,14 @@ describe('CityPicker', () => {
             render(<CityPicker />)
         })
 
-        test.skip('should update selectedCountry and reset selectedCity on handleSelectedCountry', () => {
+        test.todo('should update selectedCountry and reset selectedCity on handleSelectedCountry', () => {
             render(<CityPicker />)
 
             const countryOption = { value: { isoCode: 'US' }, label: 'United States' }
 
         })
 
-        test.skip('should update selectedCity and call router.push on handleSelectedCity', () => {
+        test.todo('should update selectedCity and call router.push on handleSelectedCity', () => {
             const mockRouter = {
                 push: vi.fn(),
             }
@@ -53,7 +53,7 @@ describe('CityPicker', () => {
             expect(screen.getByLabelText('City')).not.toBeInTheDocument()
         })
 
-        test.skip('should render the city select component when a country is selected', () => {
+        test.todo('should render the city select component when a country is selected', () => {
             render(<CityPicker />)
 
             expect(screen.getByLabelText('City')).toBeInTheDocument()
